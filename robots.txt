@@ -1,0 +1,38 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /temp/
+Disallow: /cache/
+
+# Allow important pages
+Allow: /
+Allow: /galeria.html
+Allow: /reservas.html
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.avif$
+Allow: /*.png$
+
+# Sitemap location
+Sitemap: https://www.sauvageccb.pt/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+User-agent: Bingbot
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+User-agent: Slurp
+Disallow: /admin/
+Disallow: /private/
+Allow: /

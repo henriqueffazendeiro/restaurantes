@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Página Principal -->
+    <url>
+        <loc>https://www.sauvageccb.pt/</loc>
+        <lastmod>2024-08-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://www.sauvageccb.pt/og-image.jpg</image:loc>
+            <image:title>Sauvage CCB - Restaurante Gourmet Lisboa</image:title>
+            <image:caption>Restaurante gourmet no Centro Cultural de Belém, Lisboa</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.sauvageccb.pt/imagem1.png</image:loc>
+            <image:title>Ambiente elegante do restaurante Sauvage CCB</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.sauvageccb.pt/1.webp</image:loc>
+            <image:title>Interior moderno do restaurante Sauvage CCB</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.sauvageccb.pt/2.jpg</image:loc>
+            <image:title>Especialidade culinária Sauvage CCB</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Página de Galeria -->
+    <url>
+        <loc>https://www.sauvageccb.pt/galeria.html</loc>
+        <lastmod>2024-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://www.sauvageccb.pt/og-image-galeria.jpg</image:loc>
+            <image:title>Galeria de Fotos - Sauvage CCB</image:title>
+            <image:caption>Explore a galeria de fotos do Sauvage CCB</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.sauvageccb.pt/3.webp</image:loc>
+            <image:title>Mesa romântica com vista panorâmica do Tejo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.sauvageccb.pt/4.jpg</image:loc>
+            <image:title>Chef executivo preparando pratos de alta gastronomia</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.sauvageccb.pt/5.webp</image:loc>
+            <image:title>Ambiente noturno acolhedor do Sauvage CCB</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.sauvageccb.pt/6.jpg</image:loc>
+            <image:title>Sobremesa artesanal - experiência gastronómica</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Página de Reservas -->
+    <url>
+        <loc>https://www.sauvageccb.pt/reservas.html</loc>
+        <lastmod>2024-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.sauvageccb.pt/og-image-reservas.jpg</image:loc>
+            <image:title>Reservar Mesa - Sauvage CCB</image:title>
+            <image:caption>Reserve a sua mesa no restaurante Sauvage CCB</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Seções da página principal com âncoras -->
+    <url>
+        <loc>https://www.sauvageccb.pt/#sobre</loc>
+        <lastmod>2024-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.sauvageccb.pt/#gastronomia</loc>
+        <lastmod>2024-08-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.sauvageccb.pt/#contacto</loc>
+        <lastmod>2024-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+</urlset>
