@@ -95,10 +95,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Reserve button functionality
     const reserveBtn = document.querySelector('.reserve-btn');
-    reserveBtn.addEventListener('click', function() {
-        // Here you would typically integrate with TheFork API or redirect to booking page
-        alert('Redirecionando para reserva...\n\nEm um site real, isto levaria para a página de reservas do TheFork.');
-    });
+    if (reserveBtn) {
+        reserveBtn.addEventListener('click', function(e) {
+            // Allow the button to work normally (redirect to TheFork)
+            // Remove alert to avoid showing demo message
+        });
+    }
 
 
     // Initialize mobile menu state

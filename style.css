@@ -2280,4 +2280,8 @@ body {
     .contact-item {
         padding: 1.5rem;
     }
+    
+    .footer-social {
+        margin-left: -250px;
+    }
 }
