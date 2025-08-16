@@ -161,7 +161,13 @@ class LanguageSwitcher {
                 'review-3': 'Atmosfera única e sabores autênticos. Muito bom!',
                 'review-4': 'Experiência inesquecível! Tudo foi perfeito.',
                 'review-5': 'Cozinha de excelência. Pratos são obras de arte.',
-                'review-6': 'Ambiente sofisticado e carta de vinhos excelente.'
+                'review-6': 'Ambiente sofisticado e carta de vinhos excelente.',
+                
+                // Dish Cards Tags
+                'chef-special': "⭐ Chef's Special",
+                'tag-vegetarian': 'Vegetariano',
+                'tag-fish': 'Peixe',
+                'tag-meat': 'Carne'
             },
             en: {
                 // Navigation
@@ -320,7 +326,13 @@ class LanguageSwitcher {
                 'review-3': 'Unique atmosphere and authentic flavors. Very good!',
                 'review-4': 'Unforgettable experience! Everything was perfect.',
                 'review-5': 'Cuisine of excellence. Dishes are works of art.',
-                'review-6': 'Sophisticated ambiance and excellent wine list.'
+                'review-6': 'Sophisticated ambiance and excellent wine list.',
+                
+                // Dish Cards Tags
+                'chef-special': "⭐ Chef's Special",
+                'tag-vegetarian': 'Vegetarian',
+                'tag-fish': 'Fish',
+                'tag-meat': 'Meat'
             }
         };
         
