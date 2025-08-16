@@ -258,9 +258,9 @@
                 
                 <nav class="navbar" id="navbar">
                     <ul class="nav-menu">
-                        <li><a href="#gastronomia">Menu</a></li>
                         <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="#gastronomia">Menu</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </nav>
@@ -293,9 +293,9 @@
             
             <!-- Navigation Links -->
             <ul class="mobile-menu-list">
-                <li><a href="#gastronomia">Menu</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="#gastronomia">Menu</a></li>
+                <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             
@@ -379,10 +379,11 @@
                     <img src="imagem1.png" alt="Ambiente elegante do restaurante Sauvage CCB no Centro Cultural de Belém" class="main-image" loading="lazy">
                 </div>
                 <div class="about-right-section">
+                    <h3 class="about-subtitle">A NOSSA HISTÓRIA</h3>
                     <h2 class="about-title-orange">Sobre Nós . . .</h2>
                     <div class="about-text-black">
                         <p>No coração de Belém, o Sauvage CCB oferece uma experiência gastronómica única onde cada prato conta uma história e cada momento se torna memória.</p>
-                        <p>Combinamos sabores autênticos com uma atmosfera sofisticada, proporcionando momentos inesquecíveis.</p>
+                        <p>Combinamos sabores autênticos com uma atmosfera sofisticada, proporcionando momentos inesquecíveis com vista privilegiada para o Tejo.</p>
                     </div>
                 </div>
             </div>
@@ -406,37 +407,156 @@
         </div>
     </section>
 
-    <!-- Gastronomia Section -->
-    <section class="gastronomia" id="gastronomia">
-        <div class="container">
-            <div class="gastronomia-header">
-                <h2 class="section-title gastronomia-title">Gastronomia</h2>
-                <button class="menu-btn">Ver Menu</button>
+    <!-- Menu Section -->
+    <section class="menu-section" id="gastronomia">
+        <div class="menu-container">
+            <!-- Header -->
+            <div class="menu-header">
+                <div class="menu-header-content">
+                    <div>
+                        <p class="menu-subtitle">Experimente o nosso sabor</p>
+                        <h2 class="menu-title">O nosso menu</h2>
+                        <p class="menu-description">Seleção de pratos autorais, ingredientes locais e sazonalidade. Veja o menu completo, faça o download em PDF ou reserve já a sua mesa.</p>
+                    </div>
+                    <div class="menu-header-buttons">
+                        <a href="#reservas" class="btn-secondary">Reservar mesa</a>
+                        <a href="menu.html" class="btn-primary">Ver menu completo</a>
+                    </div>
+                </div>
             </div>
-            
-            <div class="food-carousel">
-                <div class="carousel-container">
-                    <div class="carousel-track" id="food-carousel-track">
-                        <!-- Food items will be populated by JavaScript -->
+
+            <!-- Highlights Grid (6 items) -->
+            <div class="menu-highlights-grid" id="menu-highlights">
+                <div class="dish-card">
+                    <div class="dish-image-container">
+                        <img src="raviolideabobora.avif" alt="Ravioli de abóbora" class="dish-image">
+                        <div class="chef-special">⭐ Chef's Special</div>
+                    </div>
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Ravioli de Abóbora</h3>
+                            <span class="dish-price">21,00 €</span>
+                        </div>
+                        <p class="dish-description">Massa fresca, abóbora assada, noz, queijo de cabra caramelizado, molho cítrico</p>
+                        <div class="dish-tags">
+                            <span class="tag">Vegetariano</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image-container">
+                        <img src="arrozderobalo.avif" alt="Arroz de robalo" class="dish-image">
+                    </div>
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Arroz de Robalo</h3>
+                            <span class="dish-price">28,00 €</span>
+                        </div>
+                        <p class="dish-description">Robalo, arroz carolino, coentros, algas e salicórnia</p>
+                        <div class="dish-tags">
+                            <span class="tag">Peixe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image-container">
+                        <img src="polvo.webp" alt="Polvo" class="dish-image">
+                    </div>
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Polvo à Casa</h3>
+                            <span class="dish-price">22,00 €</span>
+                        </div>
+                        <p class="dish-description">Patanisca de polvo, arroz de tomate, maionese de tinta de choco</p>
+                        <div class="dish-tags">
+                            <span class="tag">Peixe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image-container">
+                        <img src="lombodeatum.avif" alt="Lombo de atum" class="dish-image">
+                        <div class="chef-special">⭐ Chef's Special</div>
+                    </div>
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Lombo de Atum</h3>
+                            <span class="dish-price">22,00 €</span>
+                        </div>
+                        <p class="dish-description">Atum braseado, legumes salteados, molho verde, crocante de limão</p>
+                        <div class="dish-tags">
+                            <span class="tag">Peixe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image-container">
+                        <img src="peixegalo.jpg" alt="Peixe galo" class="dish-image">
+                    </div>
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Peixe Galo</h3>
+                            <span class="dish-price">23,50 €</span>
+                        </div>
+                        <p class="dish-description">Filete frito, salada russa, molho de manteiga e alcaparras</p>
+                        <div class="dish-tags">
+                            <span class="tag">Peixe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image-container">
+                        <img src="wellington.webp" alt="Wellington de leitão" class="dish-image">
+                    </div>
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">"Wellington" de Leitão</h3>
+                            <span class="dish-price">24,00 €</span>
+                        </div>
+                        <p class="dish-description">Massa quebrada, leitão, duxelles, salada de espinafre baby, tomate cereja</p>
+                        <div class="dish-tags">
+                            <span class="tag">Carne</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="menu-cta">
+                <div class="menu-cta-content">
+                    <div class="menu-cta-text">
+                        <p class="menu-cta-title">Quer ver o menu completo?</p>
+                        <p class="menu-cta-desc">Abra a versão detalhada com descrições, alergénios e seleção por categorias.</p>
+                    </div>
+                    <div class="menu-cta-buttons">
+                        <a href="#menu.pdf" class="btn-secondary">Download PDF</a>
+                        <a href="menu.html" class="btn-primary">Ver menu completo</a>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
     <!-- Background Section -->
-    <section class="background-section">
-        <div class="container">
-            <div class="background-content">
-                <h2>A melhor vista e a melhor comida estão à sua espera!</h2>
-                <p>Não perca mais tempo, reserve connosco!</p>
-                <a href="https://widget.thefork.com/pt-PT/1a254189-b2c4-4d2b-97d3-1071e750a4b7" class="reserve-btn" target="_blank">Reservar</a>
-            </div>
+    <section class="reserve-section">
+        <!-- Overlay escuro para contraste -->
+        <div class="reserve-overlay"></div>
+        
+        <div class="reserve-content">
+            <h2 class="reserve-title">A melhor vista e a melhor comida estão à sua espera!</h2>
+            <p class="reserve-subtitle">Não perca mais tempo, reserve connosco!</p>
+            <a href="https://widget.thefork.com/pt-PT/1a254189-b2c4-4d2b-97d3-1071e750a4b7" class="reserve-cta-btn" target="_blank">Reservar mesa</a>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery-section">
+    <section class="gallery-section" id="galeria">
         <div class="container">
             <div class="gallery-content">
                 <div class="gallery-text">
@@ -462,6 +582,7 @@
     <section class="reviews-section">
         <div class="container">
             <div class="reviews-header">
+                <p class="reviews-subtitle">Avaliações reais de quem já viveu a experiência.</p>
                 <h2>O que dizem os nossos clientes</h2>
                 <div class="review-platforms">
                     <div class="thefork-logo-review">
@@ -595,6 +716,5 @@
     <script src="sauvage-marquee.js" defer></script>
     <script src="food-carousel.js" defer></script>
     <script src="reviews-carousel.js" defer></script>
-    <script src="menu-modal.js" defer></script>
 </body>
 </html>
