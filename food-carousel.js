@@ -6,17 +6,60 @@ class FoodCarousel {
         this.autoSlideInterval = null;
         this.direction = 1; // 1 for forward, -1 for backward
         this.foodItems = [
-            { name: 'Ravioli de abóbora', price: '21 €', description: 'Massa fresca, abóbora assada, nóz, queijo cabra caramelizado, molho cítrico de queijo', image: 'raviolideabobora.avif' },
-            { name: 'Arroz de robalo', price: '28 €', description: 'Robalo, arroz carolino, coentros, algas e salicórnia', image: 'arrozderobalo.avif' },
-            { name: 'Polvo', price: '22 €', description: 'Patanisca de polvo, arroz de tomate e maionese de tinta de choco', image: 'polvo.webp' },
-            { name: 'Lombo de atum', price: '22 €', description: 'Atum braseado, legumes salteados, molho verde e crocante de limão', image: 'lombodeatum.avif' },
-            { name: 'Peixe galo', price: '23,5 €', description: 'Filete de peixe galo frito, salada russa, molho de manteiga e alcaparras', image: 'peixegalo.jpg' },
-            { name: '"Wellington" de leitão', price: '24 €', description: 'Massa quebrada, leitão, duxelles, salada de espinafre baby e mix de tomate cereja', image: 'wellington.webp' },
-            { name: 'Entrecôte (250gr)', price: '27 €', description: 'Novilho, batata frita e molho "marrare"', image: 'entrecote.webp' }
+            { 
+                nameKey: 'ravioli-abobora', 
+                descKey: 'ravioli-desc', 
+                price: '21 €', 
+                image: 'raviolideabobora.avif' 
+            },
+            { 
+                nameKey: 'arroz-robalo', 
+                descKey: 'arroz-robalo-desc', 
+                price: '28 €', 
+                image: 'arrozderobalo.avif' 
+            },
+            { 
+                nameKey: 'polvo', 
+                descKey: 'polvo-desc', 
+                price: '22 €', 
+                image: 'polvo.webp' 
+            },
+            { 
+                nameKey: 'lombo-atum', 
+                descKey: 'lombo-desc', 
+                price: '22 €', 
+                image: 'lombodeatum.avif' 
+            },
+            { 
+                nameKey: 'peixe-galo', 
+                descKey: 'peixe-desc', 
+                price: '23,5 €', 
+                image: 'peixegalo.jpg' 
+            },
+            { 
+                nameKey: 'wellington-leitao', 
+                descKey: 'wellington-leitao-desc', 
+                price: '24 €', 
+                image: 'wellington.webp' 
+            },
+            { 
+                nameKey: 'entrecote-250', 
+                descKey: 'entrecote-250-desc', 
+                price: '27 €', 
+                image: 'entrecote.webp' 
+            }
         ];
         
         this.init();
         this.handleResize();
+        
+        // Expose instance globally for language switcher
+        window.foodCarouselInstance = this;
+        
+        // Listen for language changes
+        document.addEventListener('languageChanged', (event) => {
+            this.createCarousel();
+        });
     }
 
     getItemsPerPage() {
@@ -44,8 +87,12 @@ class FoodCarousel {
         const foodItem = document.createElement('div');
         foodItem.className = 'food-item';
         
+        // Get translations from language switcher if available
+        const currentLang = localStorage.getItem('language') || 'pt';
+        const name = this.getTranslation(item.nameKey, currentLang);
+        
         foodItem.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" class="food-image" loading="lazy">
+            <img src="${item.image}" alt="${name}" class="food-image" loading="lazy">
         `;
 
         // Add click animation
@@ -54,6 +101,45 @@ class FoodCarousel {
         });
 
         return foodItem;
+    }
+    
+    getTranslation(key, language) {
+        // Access translations from the global language switcher
+        if (window.languageSwitcherTranslations && window.languageSwitcherTranslations[language] && window.languageSwitcherTranslations[language][key]) {
+            return window.languageSwitcherTranslations[language][key];
+        }
+        
+        // Fallback translations for food items
+        const fallbackTranslations = {
+            pt: {
+                'ravioli-abobora': 'Ravioli de abóbora',
+                'arroz-robalo': 'Arroz de robalo',
+                'polvo': 'Polvo',
+                'lombo-atum': 'Lombo de atum',
+                'peixe-galo': 'Peixe galo',
+                'wellington-leitao': '"Wellington" de leitão',
+                'entrecote-250': 'Entrecôte (250gr)'
+            },
+            en: {
+                'ravioli-abobora': 'Pumpkin ravioli',
+                'arroz-robalo': 'Sea bass rice',
+                'polvo': 'Octopus',
+                'lombo-atum': 'Tuna loin',
+                'peixe-galo': 'John Dory',
+                'wellington-leitao': 'Suckling pig "Wellington"',
+                'entrecote-250': 'Ribeye (250gr)'
+            }
+        };
+        
+        return fallbackTranslations[language] && fallbackTranslations[language][key] 
+            ? fallbackTranslations[language][key] 
+            : key;
+    }
+    
+    // Add method to refresh carousel when language changes
+    refreshForLanguage() {
+        this.createCarousel();
+        this.updateCarousel();
     }
 
     animateItemClick(item) {
